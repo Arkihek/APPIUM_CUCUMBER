@@ -3,9 +3,9 @@ package stepdefinitions;
 import io.cucumber.java.en.Given;
 import utilities.Driver;
 
-public class denemeStep {
+public class aileButcemStep {
 
-    public denemeStep() {
+    public aileButcemStep() {
     }
 
     @Given("Kullanici ilgili kurulumlari tamamlayarak cihazla baglantisini gerceklestirir")

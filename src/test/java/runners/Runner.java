@@ -9,8 +9,9 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "json:target/cucumber.json"},
         features = {"src/test/resources/features"},
         glue = {"stepdefinitions"},
-        tags = "@deneme",
+        tags = "@apk",
         dryRun = false
+
         /*
         Eger ki featureslarda bizim eksik yani daha once tanimlanmamis (sari sekilde gozukmesi) scenriolari belirlemek icin
         eksik adim olup olmadigini dryRun`i TRUE yaparak kontrol etmis oluruz.

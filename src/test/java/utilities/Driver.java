@@ -125,7 +125,7 @@ public class Driver {
 
                 assert appiumServerURL != null;
                 appiumDriver = new AndroidDriver<>(appiumServerURL, caps);
-                appiumDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+                appiumDriver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 
             } else {
 

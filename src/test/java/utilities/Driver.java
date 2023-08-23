@@ -75,6 +75,7 @@ public class Driver {
             // true uygulama sifirlanmiyor onceki adimlari muhafaza ediyor
             //false ise her test baslangicinda uygulamayi sifirliyor ve uygulama en bastan basliyor
 
+
             if (ConfigReader.getProperty("platformName").equals("Android")) {
 
                 assert appiumServerURL != null;
@@ -98,5 +99,41 @@ public class Driver {
             appiumDriver = null;
 
         }
+    }
+
+    public static AndroidDriver getAndroidBrowserDriver() {
+        URL appiumServerURL = null;
+        try {
+            appiumServerURL = new URL("http:127.0.0.1:4723/wd/hub");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        if (appiumDriver == null) {
+
+            DesiredCapabilities caps = new DesiredCapabilities();
+            caps.setCapability(MobileCapabilityType.DEVICE_NAME, TELEFONADI);
+            caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, ANDROIDVERSION);
+            caps.setCapability(MobileCapabilityType.PLATFORM_NAME, PLATFORM);
+            caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, OTOMASYON_ISMI);
+
+            caps.setCapability(MobileCapabilityType.NO_RESET, false);
+
+            caps.setCapability(MobileCapabilityType.BROWSER_NAME,"chrome");
+            caps.setCapability("chromedriverExecutable","C:\\Users\\ihsan\\IdeaProjects\\Appium_Cucumber\\driverBrowser\\chromedriver.exe");
+
+            if (ConfigReader.getProperty("platformName").equals("Android")) {
+
+                assert appiumServerURL != null;
+                appiumDriver = new AndroidDriver<>(appiumServerURL, caps);
+                appiumDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+            } else {
+
+                throw new UnsupportedOperationException("Invalid Platform Name ");
+
+            }
+        }
+
+        return appiumDriver;
     }
 }

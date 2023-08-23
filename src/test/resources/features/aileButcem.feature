@@ -7,9 +7,8 @@ Feature: Kullanici aile butcem uygulamasindaki fonksiyonlari test eder
     * ilk ekran ayarlarini yapin ve ardindan "Giriş Yap" login sayfasina ulasin
     * "testfort108@gmail.com" ve "t108t108" bilgilerini girerek kullanici bilgileriyle "Giriş Yap" giris yapin
     * uygulamaya kullanici bilgileriyle giris yapildigini dogrulayin
-    * sol kisimdaki menuden hesabim bolumune gidin
-    * hesabim sayfasindaki bilgileri degistirerek degisikleri kaydedin
-    * ardindan degisiklerin yapildigini dogrulayin
+    * sol kisimdaki menuden "Hesabım" bolumune gidin
+    * hesabim sayfasindaki bilgileri degistirerek "ihsan" "yilmaz" "Samsun" "28" "QA" degisikleri kaydedin "Kaydet" ve degisiklik olup olmadigi dogrulanir
     * kullanici uygulamayi kapatir
 
 
